@@ -1,0 +1,36 @@
+Chien Dog Animal domestique Animaux
+shee-an Chat Cat Animal domestique
+Animaux kat Lion Lion Grand
+félin Animaux lye-uhn Éléphant Elephant
+Gros mammifère Animaux el-uh-fuhnt Serpent
+Snake Animal reptilien Animaux sneyk
+Oiseau Bird Animal ailé Animaux
+burd Poisson Fish Animal aquatique
+Pomme Apple Fruit Fruits ap-uhl
+Banane Banana Fruit Fruits buh-nan-uh
+Orange Orange Fruit Fruits or-inj 
+Raisin Grapes Fruit Fruits greyps 
+Fraise Strawberry Fruit Fruits straw-ber-ee
+Cerise Cherry Fruit Fruits cher-ee
+Pêch Peach Fruit Fruits peech
+Rouge Red Couleu Couleurs red                                            
+Bleu Blue Couleur Couleurs bloo
+Jaune Yellow Couleur Couleurs yel-oh
+Vert Green Couleur Couleurs green"},
+Orange Orange Couleur Couleurs or-inj
+Violet Purple Couleur Couleurs pur-puhl
+Rose Pink Couleur Couleurs pingk 
+Médecin Doctor Métier Métiers dok-ter
+Policier Police officer Métier Métiers puh-leece aw-fuh-ser
+Pompier Firefighter Métier Métiers fahy-er-fahy-ter
+Professeur Teacher Métier Métiers tee-cher
+Ingénieur Engineer Métier Métiers en-juh-neer
+Avocat Lawyer Métier Métiers loi-er
+Scientifique Scientist Métier Métiers sahy-uhn-tist
+France France Pays Pays frans
+États-Unis United States Pays Pays yoo-nahy-tid stayts
+Japon Japan Pays Pays juh-pan
+Brésil Brazil Pays Pays bruh-zil
+Australie Australia Pays Pays aw-streyl-yuh
+Inde India Pays Pays in-dee-uh
+Canada Canada Pays Pays kan-uh-duh 

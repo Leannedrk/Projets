@@ -1,0 +1,660 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;    
+    color: #777;
+    padding-top: 60px; /* Ajoute un padding en haut pour que le contenu ne soit pas caché par la barre de navigation */
+}
+
+h3,
+h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    color: #111;
+    text-align: center;
+}
+/*Navbar*/
+.navbar {
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed; /* Fixe la barre de navigation en haut */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Assure que la barre de navigation est au-dessus des autres éléments */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-logo {
+    height: 130px; 
+    margin: -70px; /* Ajuste des marges pour que l'image soit alignée avec la barre de navigation */
+    position: relative; /* Position relative pour permettre l'utilisation de z-index */
+    z-index: 10; /* Met l'image en premier plan */
+    transition: height 0.3s; /* Transition pour un effet de réduction en douceur */
+}
+
+.navbar-logo.small {
+    height: 70px; /* Taille réduite du logo */
+    margin: -10px; /* Ajuste les marges pour que l'image soit alignée avec la barre de navigation */
+}
+
+.navbar img {
+    max-height: 130px;
+    margin-top: -10px; /* Aligne l'image au haut de la barre de navigation */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+.uploadButton {
+    margin: 20px; 
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* SLIDER */
+
+.slider-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slider-container img {
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+}
+
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+
+.menu label:hover,
+.menu label:focus {
+    background: #1c87c9;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /*z-index: 10;*/
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s 0.75s;
+}
+
+[id^="slide"]:checked+.slide {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+.slide-1 {
+    background-image: url("../photos/photo1.png");
+}
+
+.slide-2 {
+    background-image: url("../photos/photo2.png");
+}
+
+.slide-3 {
+    background-image: url("../photos/photo3.png");
+}
+
+.intro {
+    background: #fff;
+    padding: 60px 30px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 18pt;
+    padding-bottom: 15px;
+}
+
+.intro p {
+    font-size: 14px;
+}
+
+
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Style for buttons */
+
+button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /*width: 100%;*/
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+.okbtn {
+    background-color: #04AA6D;
+    border-radius: 10px; /* Ajoutez cette ligne pour arrondir les coins */
+
+}
+
+.cancelbtn {
+    background-color: #f44336;
+    border-radius: 10px;
+
+}
+
+.addbtn {
+    background-color: #363337;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+.dlgheadcontainer {
+    text-align: center;
+    margin: 24px 12px 12px 12px;
+    position: relative;
+    background-color: #333;
+}
+
+.dlgheadcontainer h1 {
+    color: white;
+}
+
+.dlgcontainer {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 200;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 500px;
+    /* Could be more or less, depending on screen size */
+}
+
+/* Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Change styles */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+/* SETLIST */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: center;
+    padding: 8px;
+    background-color: #2d2d30;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.headersort {
+    text-align: center;
+}
+
+.align-middle {
+    text-align: center;
+}
+
+.headersort a {
+    color: #ffffff !important;
+}
+
+.headersort a:hover {
+    color: #fff !important;
+}
+
+.headersort .active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+.headersearch {
+    text-align: left;
+}
+
+.searchinput {
+    color: #444;
+    font-size: large;
+}
+
+.formcontact input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.formcontact input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formcontact input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.formcontact {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.contactbar {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.contactbar ul {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20;
+}
+
+.contactbar li {
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    float: left;
+    padding: 25px 16px;
+}
+
+/* document */
+
+/* test java */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.competitions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.competition-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px; /* Ajoutez cette ligne pour arrondir les coins */
+
+}
+
+
+.upload-section button {
+    background-color: #FF8A33;  
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.event-gallery {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.event-item {
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 2px dashed #FF8A33;
+    margin: 20px 0;
+}
+
+.partners-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.partners {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.partners img {
+    display: inline-block;
+    margin: 0 50px;
+    vertical-align: middle;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.title-left {
+    text-align: left;
+    margin-left: 50px; /* Ajoutez une marge gauche si nécessaire */
+}

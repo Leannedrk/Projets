@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>La Chambre de Van Gogh</title>
+        <style>
+        body { 
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }        
+        h2 {
+            font-style: italic;
+            font-weight: lighter;
+            font-size: 20px
+        }
+        .centre {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- API importe du site de Three.js -->
+        <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://threejs.org/build/three.module.js",
+                "three/addons/": "https://threejs.org/examples/jsm/"
+            }
+        }
+        </script>
+        <!-- JQuery pour afficher les erreurs -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+        <!-- Un titre centre -->
+        <h1 class="centre">La Chambre de Van Gogh</h1>
+        
+        <!-- Container pour l'image et la scène WebGL -->
+        <div class="container">
+            <!-- Image à gauche -->
+            <div class="image-container">
+                <h2>La Chambre de Van Gogh à Arles</h2>
+                <p>Vincent Van Gogh <br>
+                    1889<br>
+                    Huile sur toile</p>
+                <img src="img.jpg" alt="La Chambre de Van Gogh - Peinture originale">
+                <p>DE RYCKE Leanne <br>DUFOUR Louise <br><br>Reproduction 3D WEBGL <br>BUT2 INFO 2025</p>
+                <p>Dans cette implémentation, nous avons intégré plusieurs techniques graphiques avancées pour améliorer le rendu visuel de la scène 3D. Une specular map a été appliquée au chiffon, améliorant le réalisme des reflets lumineux en fonction de la texture de surface. Nous avons également configuré une interface gui permettant de s'integrer totalement dans la pièce. Enfin, des sprites ou éléments géométriques simples ont été utilisés pour représenter les flammes des bougies, créant un effet lumineux dynamique grâce à des points de lumière et des animations subtiles.</p>
+            </div>
+            
+            <!-- Scène WebGL à droite -->
+            <div class="webgl-container" id="webGL"></div>
+        </div>
+        
+        <!-- Mon script avec un chemin relatif -->
+        <script type="module" src="chambre.js"></script>
+    </body>
+</html>
